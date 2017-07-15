@@ -1,0 +1,96 @@
+
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Trivia Game</title>
+    <link rel="stylesheet" href="https://bootswatch.com/cyborg/bootstrap.min.css">
+    <link rel="stylesheet" href="http://jquerymodal.com/jquery.modal.css">
+    <link rel="stylesheet" href="css/style.css">
+  </head>
+
+  <body>
+
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">Trivia Game</a>
+        </div>
+        <div id="navbar" class="collapse navbar-collapse">
+          <ul class="nav navbar-nav">
+          </ul>
+        </div><!--/.nav-collapse -->
+      </div>
+    </nav>
+    <div class="container">
+      <div class="wrapper">
+        <header><h1>Trivia Quiz</h1></header>
+        <div id="timer">00:00</div>
+        <div id='profile'>
+
+          <a id='start' class='btn btn-success btn-lg text-center'href="#categoryModal" rel="modal:open"><h4>Start</h4></a>
+
+          <div class="modal" id="categoryModal" style="display:none;">
+            <p>Please Choose A Category</p>
+            <select id="category"class="form-control">
+              <option value="18">Computer</option>
+              <option value="9">General Knowledge</option>
+              <option value="23">History</option>
+              <option value="11">Film</option>
+              <option value="12">Music</option>
+            </select>
+            </br>
+            <a id="btnCategory"class='btn btn-primary'href="#questionModal" rel="modal:open">Submit</a>
+          </div>
+
+          <div class="modal" id="questionModal" style="display:none;">
+            <p>How many questions would you like.</p>
+            <select id="numQuestions"class="form-control">
+              <option>5</option>
+              <option>10</option>
+              <option>15</option>
+              <option>20</option>
+              <option>50</option>
+            </select>
+            </br>
+            <a id="btnNumQuestions"class='btn btn-primary'href="#ex6-3" rel="modal:open">Submit</a>
+          </div>
+
+          <div class="modal" id="ex6-3" style="display:none;">
+            <p>Please Choose a difficulty Level. You get the idea.</p>
+            <select id="level"class="form-control">
+              <option value="easy">Easy</option>
+              <option value="medium">Medium</option>
+              <option value="hard">Hard</option>
+            </select>
+            </br>
+            <a id="btnLevel"class='btn btn-primary start' href="#" rel="modal:close">Submit</a>
+          </div>
+
+          <div class="modal" id="results" style="display:none;">
+            <a class='btn btn-primary ' href="#" rel="modal:close">Done</a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" charset="utf-8"></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="http://jquerymodal.com/jquery.modal.js" charset="utf-8"></script>
+    <script src="js/app.js" charset="utf-8"></script>
+  </body>
+</html>
